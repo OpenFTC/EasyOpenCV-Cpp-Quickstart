@@ -13,11 +13,26 @@
 
 // Include common definitions from above.
 apply from: '../build.common.gradle'
+apply from: '../build.dependencies.gradle'
 
-repositories {
-    maven { url = "https://dl.bintray.com/first-tech-challenge/ftcsdk/" }
+android {
+
+    // Encapsulates your external native build configurations.
+    externalNativeBuild {
+
+        // Encapsulates your CMake build configurations.
+        cmake {
+
+            // Provides a relative path to your CMake build script.
+            path "CMakeLists.txt"
+        }
+    }
+
+    ndkVersion '21.0.6113669'
 }
 
 dependencies {
+    implementation project(':FtcRobotController')
+    implementation 'org.openftc:easyopencv:1.4.3'
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
 }
