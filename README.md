@@ -8,7 +8,7 @@ Currently based on FTC Robot Controller SDK v7.0
 
 # Setup instructions
 
-1. Ensure that you have version `21.0.6113669` of the side-by-side Android NDK installed
+1. Ensure that you have version `21.3.6528147` of the side-by-side Android NDK installed
 2. Fork this repo and clone your fork into a parent directory of your choice
 3. Also clone [OpenCV-Repackaged](https://github.com/OpenFTC/OpenCV-Repackaged) **into the same parent directory** as you cloned this project. This is necessary because the build scripts in this project reference files that are in OpenCV-Repackaged.
 
