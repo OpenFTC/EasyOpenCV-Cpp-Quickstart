@@ -4,7 +4,7 @@ An example FTC Robot Controller project for running C++ OpenCV code through Easy
 
 # Version information
 
-Currently based on FTC Robot Controller SDK v6.2
+Currently based on FTC Robot Controller SDK v7.0
 
 # Setup instructions
 
