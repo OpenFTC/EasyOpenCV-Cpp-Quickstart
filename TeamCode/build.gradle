@@ -17,6 +17,8 @@ apply from: '../build.dependencies.gradle'
 
 android {
 
+    namespace = 'org.firstinspires.ftc.teamcode'
+
     // Encapsulates your external native build configurations.
     externalNativeBuild {
 
@@ -38,6 +40,6 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation 'org.openftc:easyopencv:1.5.1'
+    implementation 'org.openftc:easyopencv:1.5.2'
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
 }
