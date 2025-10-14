@@ -36,8 +36,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 
-/**
- * This particular OpMode executes a POV Game style Teleop for a direct drive robot
+/*
+ * This OpMode executes a POV Game style Teleop for a direct drive robot
  * The code is structured as a LinearOpMode
  *
  * In this mode the left stick moves the robot FWD and back, the Right stick turns left and right.
@@ -45,7 +45,7 @@ import com.qualcomm.robotcore.util.Range;
  * It also opens and closes the claws slowly using the left and right Bumper buttons.
  *
  * Use Android Studio to Copy this Class, and Paste it into your team's code folder with a new name.
- * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
+ * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list
  */
 
 @TeleOp(name="Robot: Teleop POV", group="Robot")
@@ -96,10 +96,10 @@ public class RobotTeleopPOV_Linear extends LinearOpMode {
         rightClaw.setPosition(MID_SERVO);
 
         // Send telemetry message to signify robot waiting;
-        telemetry.addData(">", "Robot Ready.  Press Play.");    //
+        telemetry.addData(">", "Robot Ready.  Press START.");    //
         telemetry.update();
 
-        // Wait for the game to start (driver presses PLAY)
+        // Wait for the game to start (driver presses START)
         waitForStart();
 
         // run until the end of the match (driver presses STOP)

@@ -11,13 +11,13 @@ cmake_minimum_required(VERSION 3.4.1)
 # automatically packages shared libraries with your APK.
 
 add_library( # Specifies the name of the library.
-             TeamCode
+        TeamCode
 
-             # Sets the library as a shared library.
-             SHARED
+        # Sets the library as a shared library.
+        SHARED
 
-             # Provides a relative path to your source file(s).
-             src/main/cpp/native_pipeline.cpp)
+        # Provides a relative path to your source file(s).
+        src/main/cpp/native_pipeline.cpp)
 
 ############################################################
 # You must clone OpenCv-Repackaged into the same parent    #
@@ -27,13 +27,12 @@ add_library( # Specifies the name of the library.
 
 # Specifies a path to native header files.
 include_directories(src/main/cpp/include/
-                    ${CMAKE_CURRENT_SOURCE_DIR}/../../OpenCV-Repackaged/doc/native_headers/)
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../OpenCV-Repackaged/doc/native_headers/)
 
 # Specify path to prebuilt object
 add_library(openCvNative SHARED IMPORTED)
 set_target_properties(openCvNative PROPERTIES IMPORTED_LOCATION
-        #${CMAKE_CURRENT_SOURCE_DIR}/libs/${ANDROID_ABI}/libOpenCvNative.so)
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../OpenCV-Repackaged/doc/native_libs/${ANDROID_ABI}/libOpenCvAndroid453.so)
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../OpenCV-Repackaged/OpenCV-Android-SDK/src/main/jniLibs/${ANDROID_ABI}/libopencv_java4.so)
 
 # linking libs
 target_link_libraries(

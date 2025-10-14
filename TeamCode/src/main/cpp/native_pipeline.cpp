@@ -39,6 +39,6 @@ Java_org_firstinspires_ftc_teamcode_NativePipeline_nativeProcessFrame(JNIEnv *en
             cv::Point(
                     mat->cols*(3.0/4.0),
                     mat->rows*(3.0/4.0)),
-            cv::Scalar(0, 0, 255),
+            cv::Scalar(0, 128, 255),
             4);
 }

@@ -34,17 +34,15 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import java.io.File;
-
-/**
- * This file demonstrates how to play simple sounds on both the RC and DS phones.
+/*
+ * This OpMode demonstrates how to play simple sounds on both the RC and DS phones.
  * It illustrates how to build sounds into your application as a resource.
  * This technique is best suited for use with Android Studio since it assumes you will be creating a new application
  *
  * If you are using OnBotJava, please see the ConceptSoundsOnBotJava sample
  *
  * Use Android Studio to Copy this Class, and Paste it into your team's code folder with a new name.
- * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
+ * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list
  *
  * Operation:
  *
@@ -102,7 +100,7 @@ public class ConceptSoundsASJava extends LinearOpMode {
         telemetry.addData("gold resource",   goldFound ?   "Found" : "NOT found\n Add gold.wav to /src/main/res/raw" );
         telemetry.addData("silver resource", silverFound ? "Found" : "Not found\n Add silver.wav to /src/main/res/raw" );
 
-        // Wait for the game to start (driver presses PLAY)
+        // Wait for the game to start (driver presses START)
         telemetry.addData(">", "Press Start to continue");
         telemetry.update();
         waitForStart();
