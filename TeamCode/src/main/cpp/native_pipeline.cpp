@@ -28,6 +28,9 @@ Java_org_firstinspires_ftc_teamcode_NativePipeline_nativeProcessFrame(JNIEnv *en
 {
     cv::Mat* mat = (cv::Mat*) ptrMat;
 
+    static int counter = 0;
+    static bool direction = false;
+
     /*
      * Draw a simple box around the middle 1/2 of the entire frame
      */
@@ -39,6 +42,26 @@ Java_org_firstinspires_ftc_teamcode_NativePipeline_nativeProcessFrame(JNIEnv *en
             cv::Point(
                     mat->cols*(3.0/4.0),
                     mat->rows*(3.0/4.0)),
-            cv::Scalar(0, 128, 255),
+            cv::Scalar(0, counter, 255),
             4);
+
+    if (direction)
+    {
+        counter += 10;
+    }
+    else
+    {
+        counter -= 10;
+    }
+
+    if (counter >= 255)
+    {
+        counter = 255;
+        direction = !direction;
+    }
+    else if (counter <= 0)
+    {
+        counter = 0;
+        direction = !direction;
+    }
 }

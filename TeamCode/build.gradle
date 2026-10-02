@@ -1,3 +1,5 @@
+apply plugin: 'com.android.application'
+
 //
 // build.gradle in TeamCode
 //
@@ -7,7 +9,6 @@
 // the build definitions, you can place those customizations in this file, but
 // please think carefully as to whether such customizations are really necessary
 // before doing so.
-
 
 // Custom definitions may go here
 
@@ -38,7 +39,7 @@ android {
         exclude '/lib/arm64-v8a/libopencv_java4.so'
     }
 
-    ndkVersion '21.3.6528147'
+    ndkVersion '27.3.13750724'
 }
 
 dependencies {
